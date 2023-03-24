@@ -1,0 +1,31 @@
+# Vivado Verilog gitignore
+
+# Vivado project files
+*.jou
+*.log
+
+# Generated output files
+*.bit
+*.bin
+*.dcp
+*.ltx
+*.mif
+*.txt
+*.vcd
+*.wcfg
+*.xdc
+
+# Compiled output files
+*.bin
+*.bit
+*.dat
+*.elf
+*.o
+*.out
+*.so
+
+# Temporary files
+*.bak
+*.swp
+*~
+.*.sw?
