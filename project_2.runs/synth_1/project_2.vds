@@ -1,0 +1,248 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Jan  8 02:49:10 2023
+# Process ID: 2312
+# Current directory: C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.runs/synth_1
+# Command line: vivado.exe -log project_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source project_2.tcl
+# Log file: C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.runs/synth_1/project_2.vds
+# Journal file: C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source project_2.tcl -notrace
+Command: synth_design -top project_2 -part xc7a100tcsg324-1 -directive PerformanceOptimized -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3452
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1122.875 ; gain = 14.328
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'project_2' [C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.srcs/sources_1/new/project_2.v:4]
+	Parameter S0 bound to: 3'b000 
+	Parameter S1 bound to: 3'b001 
+	Parameter S2 bound to: 3'b010 
+	Parameter S3 bound to: 3'b011 
+	Parameter S4 bound to: 3'b100 
+	Parameter S5 bound to: 3'b101 
+	Parameter S6 bound to: 3'b110 
+WARNING: [Synth 8-567] referenced signal 'b_dec' should be on the sensitivity list [C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.srcs/sources_1/new/project_2.v:37]
+WARNING: [Synth 8-567] referenced signal 'a_dec' should be on the sensitivity list [C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.srcs/sources_1/new/project_2.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'project_2' (1#1) [C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.srcs/sources_1/new/project_2.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1175.086 ; gain = 66.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1175.086 ; gain = 66.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1175.086 ; gain = 66.539
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1175.086 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF'. [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc:254]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc:254]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'y_reg/D' to be timing startpoint. [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc:258]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+WARNING: [Constraints 18-613] set_max_delay: There will be no hold timing paths from this pin 'y_reg/D' unless set_min_delay is used to constrain the paths. [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc:258]
+Resolution: Use set_min_delay constraint to manually define the constraint for hold check.
+CRITICAL WARNING: [Constraints 18-515] set_max_delay: Path segmentation by forcing 'y_reg/G' to be timing startpoint. [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc:258]
+Resolution: Use valid startpoint to avoid path segmentation such as the clock pin of a register.
+WARNING: [Constraints 18-613] set_max_delay: There will be no hold timing paths from this pin 'y_reg/G' unless set_min_delay is used to constrain the paths. [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc:258]
+Resolution: Use set_min_delay constraint to manually define the constraint for hold check.
+Finished Parsing XDC File [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/onurd/Desktop/vivado_files/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/project_2_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/project_2_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1283.281 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1283.281 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1283.281 ; gain = 174.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1283.281 ; gain = 174.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1283.281 ; gain = 174.734
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'project_2'
+WARNING: [Synth 8-327] inferring latch for variable 'y_reg' [C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.srcs/sources_1/new/project_2.v:41]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      S0 |                          0000001 |                             0000
+                      S1 |                          0000010 |                             0001
+                      S2 |                          0000100 |                             0010
+                      S4 |                          0001000 |                             0100
+                      S3 |                          0010000 |                             0011
+                      S5 |                          0100000 |                             0101
+                      S6 |                          1000000 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'project_2'
+WARNING: [Synth 8-327] inferring latch for variable 'a_dec_reg' [C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.srcs/sources_1/new/project_2.v:91]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1283.281 ; gain = 174.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 7     
+	   7 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1283.281 ; gain = 174.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1283.281 ; gain = 174.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1283.281 ; gain = 174.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1292.117 ; gain = 183.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1298.930 ; gain = 190.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1298.930 ; gain = 190.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1298.930 ; gain = 190.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1298.930 ; gain = 190.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1298.930 ; gain = 190.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1298.930 ; gain = 190.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |     2|
+|3     |LUT3 |     1|
+|4     |LUT4 |     8|
+|5     |FDCE |     6|
+|6     |FDPE |     1|
+|7     |LD   |     2|
+|8     |IBUF |     3|
+|9     |OBUF |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1298.930 ; gain = 190.383
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1298.930 ; gain = 82.188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1298.930 ; gain = 190.383
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1310.992 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1315.129 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 7 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1315.129 ; gain = 206.582
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/onurd/Desktop/sstu/Proje_2/project_2/project_2.runs/synth_1/project_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file project_2_utilization_synth.rpt -pb project_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  8 02:49:57 2023...

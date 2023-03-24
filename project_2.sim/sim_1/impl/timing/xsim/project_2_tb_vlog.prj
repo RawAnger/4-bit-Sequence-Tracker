@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"project_2_tb_time_impl.v" \
+"../../../../../project_2.srcs/sim_1/new/project_2_tb.v" \
+
+# Do not sort compile order
+nosort
